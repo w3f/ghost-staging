@@ -1,0 +1,12 @@
+ghostPassword: {{ env "GHOST_PASSWORD" | default "ghost_password" }}
+
+ingress:
+  enabled: true
+  certManager: true
+  hosts:
+  - name: ghost.w3f.community
+    tls: true
+
+mariadb:
+  db:
+    password: {{ env "MARIADB_PASSWORD" | default "mariabd_password" }}
