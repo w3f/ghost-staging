@@ -13,6 +13,8 @@ ingress:
   - name: ghost.w3f.community
     tls: true
     tlsSecret: ghost-tls
+  annotations:
+    nginx.org/client-max-body-size: "10m"
 
 mariadb:
   db:
