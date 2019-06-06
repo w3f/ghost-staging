@@ -5,6 +5,7 @@ ghostPassword: {{ env "GHOST_PASSWORD" | default "ghost_password" }}
 service:
   type: ClusterIP
   nodePorts:
+    http:
 
 ingress:
   enabled: true
