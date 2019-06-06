@@ -17,3 +17,5 @@ ingress:
 mariadb:
   db:
     password: {{ env "MARIADB_PASSWORD" | default "mariabd_password" }}
+  rootUser:
+    password: {{ env "MARIADB_ROOT_PASSWORD" | default "mariabd_root_password" }}
