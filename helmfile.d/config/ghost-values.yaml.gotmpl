@@ -13,6 +13,10 @@ ingress:
   hosts:
   - name: ghost.w3f.community
     tls: true
+  secrets:
+  - name: ghost
+    certificate: tls.crt
+    key: tls.key
 
 mariadb:
   db:
