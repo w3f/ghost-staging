@@ -1,4 +1,9 @@
+ghostHost: ghost.w3f.community
+
 ghostPassword: {{ env "GHOST_PASSWORD" | default "ghost_password" }}
+
+service:
+  type: ClusterIP
 
 ingress:
   enabled: true
