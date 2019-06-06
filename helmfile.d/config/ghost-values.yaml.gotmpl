@@ -13,9 +13,6 @@ ingress:
   - name: ghost.w3f.community
     tls: true
     tlsSecret: ghost-tls
-  annotations:
-    nginx.org/client-max-body-size: "50m"
-    ingress.kubernetes.io/proxy-body-size: "50m"
 
 mariadb:
   db:
