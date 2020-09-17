@@ -5,7 +5,10 @@ service:
   type: ClusterIP
 
 ingress:
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: 100M
   enabled: true
+  certManager: true
   hosts:
   - name: ghost.w3f.community
     tls: false
