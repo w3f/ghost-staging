@@ -7,8 +7,8 @@ repositories:
   url: https://charts.bitnami.com/bitnami
 
 releases:
-- name: ghost
+- name: ghost-staging
   chart: bitnami/ghost
-  version: 10.1.12
+  version: 14.0.19
   values:
   - ./config/ghost-values.yaml.gotmpl

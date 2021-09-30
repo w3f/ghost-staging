@@ -3,7 +3,7 @@ version: 2
 jobs:
   integrationTests:
     docker:
-      - image: web3f/ci-commons:v2.4.1
+      - image: web3f/ci-commons:v2.4.6
     steps:
       - checkout
       - setup_remote_docker:
@@ -15,7 +15,7 @@ jobs:
 
   deploy:
     docker:
-      - image: web3f/ci-commons:v2.4.1
+      - image: web3f/ci-commons:v2.4.6
     steps:
       - checkout
       - run:
@@ -35,10 +35,11 @@ workflows:
               only: /.*/
 
       - deploy:
+          context: digital_ocean_access
           filters:
             branches:
               ignore: /.*/
             tags:
-              only: /v[0-9]+(\.[0-9]+)*/
+              only: /^v(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/
           requires:
             - integrationTests

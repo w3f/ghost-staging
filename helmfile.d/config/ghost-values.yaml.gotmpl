@@ -7,11 +7,12 @@ service:
 ingress:
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: 100M
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt
   enabled: true
   certManager: true
-  hosts:
-  - name: ghost.w3f.community
-    tls: true
+  hostname: ghost.w3f.community
+  tls: true
 
 mariadb:
   db:
