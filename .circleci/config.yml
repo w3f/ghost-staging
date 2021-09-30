@@ -7,7 +7,6 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker:
-          docker_layer_caching: true
       - run:
           description: run integration tests
           command: |
@@ -21,8 +20,9 @@ jobs:
       - run:
           environment:
             HELM_ENV: production
+            CLUSTER: community
           command: |
-            /scripts/deploy.sh -c community
+            /scripts/deploy.sh
 
 
 workflows:
