@@ -14,7 +14,6 @@ ingress:
   tls: true
 
 mariadb:
-  db:
-    password: {{ env "MARIADB_PASSWORD" | default "mariabd_password" }}
-  rootUser:
+  auth:
+    rootPassword: {{ env "MARIADB_PASSWORD" | default "mariabd_password" }}
     password: {{ env "MARIADB_ROOT_PASSWORD" | default "mariabd_root_password" }}
