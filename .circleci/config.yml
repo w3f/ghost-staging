@@ -22,7 +22,7 @@ jobs:
             HELM_ENV: production
             CLUSTER: community
           command: |
-            /scripts/deploy.sh
+            /scripts/deploy.sh -c community
 
 
 workflows:
