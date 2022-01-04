@@ -9,6 +9,7 @@ repositories:
 releases:
 - name: ghost-staging
   chart: bitnami/ghost
-  version: 12.3.9
+  namespace: ghost
+  version: 15.1.8
   values:
   - ./config/ghost-values.yaml.gotmpl
