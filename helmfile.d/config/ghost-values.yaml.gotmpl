@@ -3,6 +3,9 @@ ghostHost: ghost.w3f.dev
 ghostPassword: {{ env "GHOST_PASSWORD" | default "ghost_password" }}
 ghostEnableHttps: true
 
+updateStrategy:
+  type: Recreate
+
 service:
   type: ClusterIP
 
