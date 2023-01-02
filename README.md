@@ -2,4 +2,4 @@
 
 # ghost-staging
 
-Deployment for: https://github.com/bitnami/charts/tree/master/bitnami/ghost
+Deployment for: https://github.com/bitnami/charts/tree/master/bitnami/ghosttest
